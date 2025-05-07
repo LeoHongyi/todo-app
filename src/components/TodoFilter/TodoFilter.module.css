@@ -1,0 +1,68 @@
+.filterContainer {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+  padding: 0 15px;
+}
+
+.filterButton {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 20px;
+  color: #495057;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  transition: all 0.2s ease;
+  min-width: 80px;
+}
+
+.filterButton:hover {
+  background-color: #e9ecef;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filterButton.active {
+  background-color: #4361ee;
+  color: white;
+  border-color: #4361ee;
+  box-shadow: 0 2px 8px rgba(67, 97, 238, 0.3);
+}
+
+.filterButton:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.3);
+}
+
+@media (max-width: 480px) {
+  .filterContainer {
+    gap: 6px;
+  }
+
+  .filterButton {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+    min-width: 70px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .filterButton {
+    background-color: #2d2d2d;
+    border-color: #444;
+    color: #e0e0e0;
+  }
+
+  .filterButton:hover {
+    background-color: #3d3d3d;
+  }
+
+  .filterButton.active {
+    background-color: #5d5fef;
+    border-color: #5d5fef;
+  }
+}
