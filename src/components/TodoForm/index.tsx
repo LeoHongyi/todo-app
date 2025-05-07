@@ -16,7 +16,7 @@ const TodoForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className={styles.todoForm}>
+    <form onSubmit={handleSubmit} className={styles.todoForm} role="form">
       <input
         type="text"
         value={text}
